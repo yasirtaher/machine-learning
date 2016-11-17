@@ -6,19 +6,14 @@
     The objective of this exercise is to recreate the decision
     boundary found in the lesson video, and make a plot that
     visually shows the decision boundary """
-
+import sys
+sys.path.append("../../common_files/")
 from prep_terrain_data import makeTerrainData
 from class_vis import prettyPicture, output_image
 from ClassifyNB import classify
 
 import numpy as np
 import pylab as pl
-
-from sklearn.naive_bayes import GaussianNB
-
-clf = GaussianNB()
-# clf.fit(features_train, labels_train)
-# pred = clf.predict(features_test)
 
 features_train, labels_train, features_test, labels_test = makeTerrainData()
 
