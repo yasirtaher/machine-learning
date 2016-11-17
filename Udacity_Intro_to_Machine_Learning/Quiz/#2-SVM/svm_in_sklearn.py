@@ -1,6 +1,6 @@
 import sys
 
-sys.path.append("../../common_files/")
+sys.path.append("../common_files/")
 from class_vis import prettyPicture
 from prep_terrain_data import makeTerrainData
 
