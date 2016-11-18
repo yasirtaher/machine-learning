@@ -60,7 +60,7 @@ print submitAccuracy()
 ### Output
 0.884
 
-## Project - Author ID
+## Mini Project - Author ID with Naive Bayes
 
 ### nb_author_id.py
 
@@ -76,9 +76,6 @@ print submitAccuracy()
     Sara has label 0
     Chris has label 1
 """
-
-import os
-os.chdir('C:/Users/Jeff/udacity/Intro_to_Machine_Learning/ud120-projects/naive_bayes')
 
 import sys
 from time import time
@@ -111,7 +108,7 @@ print "\ntraining time:", round(time()-t0, 3), "s"
 # predict
 t0 = time()
 pred = clf.predict(features_test)
-print "predicting time:", round(time()-t0, 3), "s"
+print "\npredicting time:", round(time()-t0, 3), "s"
 
 accuracy = accuracy_score(pred, labels_test)
 
