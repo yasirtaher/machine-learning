@@ -48,7 +48,7 @@ prettyPicture(clf, features_test, labels_test)
 ![alt text](https://github.com/yasirtaher/machine-learning/blob/master/Udacity_Intro_to_Machine_Learning/Quiz/%232-SVM/01-SVM_in_SKlearn/testRBFGamma10.png)
 
 
-## Mini Project - Author ID with Naive Bayes
+## Mini Project - Author ID Accuracy & Timing with SVM
 
 ```python
 def my_svm(kernel='linear', C=1.0):
