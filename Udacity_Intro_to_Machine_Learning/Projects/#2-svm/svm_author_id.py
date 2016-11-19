@@ -46,12 +46,13 @@ def my_svm(kernel='linear', C=1):
 
 
 # 1% of total training set
-features_train = features_train[:len(features_train) / 100]
-labels_train = labels_train[:len(labels_train) / 100]
+# features_train = features_train[:len(features_train) / 100]
+# labels_train = labels_train[:len(labels_train) / 100]
 
 # Optimize C Parameter
 # for C in [10, 100, 1000, 10000]:
-pred = my_svm('rbf', 10000)
+# print 'C =', C,
+pred = my_svm()
 # print '\n\n'
 
 # 10 - 0.616040955631
