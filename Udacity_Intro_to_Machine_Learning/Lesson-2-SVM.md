@@ -78,6 +78,7 @@ no. of Chris training emails: 7936
 no. of Sara training emails: 7884
 
 training time: 151.243 s
+
 predicting time: 15.968 s
 
 accuracy = 0.984072810011
@@ -93,6 +94,7 @@ pred = my_svm()
 
 ### Output
 training time: 0.084 s
+
 predicting time: 0.918 s
 
 accuracy = 0.884527872582
@@ -108,6 +110,7 @@ pred = my_svm('rbf')
 
 ### Output
 training time: 0.096 s
+
 predicting time: 1.032 s
 
 accuracy = 0.616040955631
@@ -127,24 +130,28 @@ for C in [10, 100, 1000, 10000]:
 ### Output
 C = 10 
 training time: 0.098 s
+
 predicting time: 1.132 s
 
 accuracy = 0.616040955631
 
 C = 100 
 training time: 0.102 s
+
 predicting time: 1.052 s
 
 accuracy = 0.616040955631
 
 C = 1000 
 training time: 0.089 s
+
 predicting time: 0.983 s
 
 accuracy = 0.821387940842
 
 C = 10000 
 training time: 0.086 s
+
 predicting time: 0.876 s
 
 accuracy = 0.892491467577
@@ -157,6 +164,7 @@ pred = my_svm(kernel='rbf', C=10000)
 
 ### Output
 training time: 98.278 s
+
 predicting time: 9.973 s
 
 accuracy = 0.990898748578
