@@ -75,6 +75,7 @@ pred = my_svm()
 
 ### Output
 no. of Chris training emails: 7936
+
 no. of Sara training emails: 7884
 
 training time: 151.243 s
@@ -129,27 +130,34 @@ for C in [10, 100, 1000, 10000]:
 
 ### Output
 C = 10 
+
 training time: 0.098 s
 
 predicting time: 1.132 s
 
 accuracy = 0.616040955631
 
+
 C = 100 
+
 training time: 0.102 s
 
 predicting time: 1.052 s
 
 accuracy = 0.616040955631
 
+
 C = 1000 
+
 training time: 0.089 s
 
 predicting time: 0.983 s
 
 accuracy = 0.821387940842
 
+
 C = 10000 
+
 training time: 0.086 s
 
 predicting time: 0.876 s
@@ -178,7 +186,9 @@ for p in [10, 26, 50]:
 
 ### Output
 1
+
 0
+
 1
 
 ### How many Chris emails predicted?
