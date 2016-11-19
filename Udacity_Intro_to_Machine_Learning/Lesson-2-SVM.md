@@ -19,7 +19,7 @@ pred = clf.predict(features_test)
 prettyPicture(clf, features_test, labels_test)
 ```
 ### Output
-![alt text](https://github.com/yasirtaher/machine-learning/blob/master/Udacity_Intro_to_Machine_Learning/Quiz/%231-Naive_Bayes/01-GaussianNB_Deployment_on_Terrain_Data/test.png?raw=true "Logo Title Text 1")
+![alt text](https://github.com/yasirtaher/machine-learning/blob/master/Udacity_Intro_to_Machine_Learning/Quiz/%232-SVM/01-SVM_in_SKlearn/testLinear.png?raw=true)
 
 ### SVM C Parameter
 ```python
@@ -32,7 +32,7 @@ prettyPicture(clf, features_test, labels_test)
 ```
 
 ### Output
-![alt text](https://github.com/yasirtaher/machine-learning/blob/master/Udacity_Intro_to_Machine_Learning/Quiz/%231-Naive_Bayes/01-GaussianNB_Deployment_on_Terrain_Data/test.png?raw=true "Logo Title Text 1")
+![alt text](https://github.com/yasirtaher/machine-learning/blob/master/Udacity_Intro_to_Machine_Learning/Quiz/%232-SVM/01-SVM_in_SKlearn/testRBFC10**5.png)
 
 
 ### SVM gamma Parameter
@@ -45,7 +45,7 @@ prettyPicture(clf, features_test, labels_test)
 ```
 
 ### Output
-![alt text](https://github.com/yasirtaher/machine-learning/blob/master/Udacity_Intro_to_Machine_Learning/Quiz/%231-Naive_Bayes/01-GaussianNB_Deployment_on_Terrain_Data/test.png?raw=true "Logo Title Text 1")
+![alt text](https://github.com/yasirtaher/machine-learning/blob/master/Udacity_Intro_to_Machine_Learning/Quiz/%232-SVM/01-SVM_in_SKlearn/testRBFGamma10.png)
 
 
 ## Mini Project - Author ID with Naive Bayes
@@ -77,6 +77,11 @@ pred = my_svm()
 no. of Chris training emails: 7936
 no. of Sara training emails: 7884
 
+training time: 151.243 s
+predicting time: 15.968 s
+
+accuracy = 0.984072810011
+
 ### A Smaller Training Set
 
 ```python
@@ -87,22 +92,32 @@ pred = my_svm()
 ```
 
 ### Output
-no. of Chris training emails: 7936
-no. of Sara training emails: 7884
+training time: 0.084 s
+predicting time: 0.918 s
+
+accuracy = 0.884527872582
 
 ### Deploy an RBF Kernel
 
 ```python
+features_train = features_train[:len(features_train)/100]
+labels_train = labels_train[:len(labels_train)/100]
+
 pred = my_svm('rbf')
 ```
 
 ### Output
-no. of Chris training emails: 7936
-no. of Sara training emails: 7884
+training time: 0.096 s
+predicting time: 1.032 s
+
+accuracy = 0.616040955631
 
 ### Optimize C Parameter
 
 ```python
+features_train = features_train[:len(features_train)/100]
+labels_train = labels_train[:len(labels_train)/100]
+
 for C in [10, 100, 1000, 10000]:
     print 'C =',C,
     pred = my_svm(kernel='rbf', C=C)
@@ -110,8 +125,29 @@ for C in [10, 100, 1000, 10000]:
 ```
 
 ### Output
-no. of Chris training emails: 7936
-no. of Sara training emails: 7884
+C = 10 
+training time: 0.098 s
+predicting time: 1.132 s
+
+accuracy = 0.616040955631
+
+C = 100 
+training time: 0.102 s
+predicting time: 1.052 s
+
+accuracy = 0.616040955631
+
+C = 1000 
+training time: 0.089 s
+predicting time: 0.983 s
+
+accuracy = 0.821387940842
+
+C = 10000 
+training time: 0.086 s
+predicting time: 0.876 s
+
+accuracy = 0.892491467577
 
 ### Optimized RBF vs. Linear SVM: Accuracy
 
@@ -120,8 +156,10 @@ pred = my_svm(kernel='rbf', C=10000)
 ```
 
 ### Output
-no. of Chris training emails: 7936
-no. of Sara training emails: 7884
+training time: 98.278 s
+predicting time: 9.973 s
+
+accuracy = 0.990898748578
 
 ### Extracting Predictions from an SVM
 
