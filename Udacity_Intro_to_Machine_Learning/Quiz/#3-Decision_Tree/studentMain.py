@@ -63,6 +63,3 @@ print submitDTAccuracies()
 ### #### ####### #### ####### #### ####### #### ####
 
 # Entropy Calculation
-
-
-
