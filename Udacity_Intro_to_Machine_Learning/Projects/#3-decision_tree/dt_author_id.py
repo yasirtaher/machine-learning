@@ -28,13 +28,21 @@ clf.fit(features_train, labels_train)
 # accuracy
 acc = clf.score(features_test, labels_test)
 
+
 def submitAccuracies():
     return {"accuracy": round(acc, 3)}
 
+
 print submitAccuracies()
+## Accuracy: 0.978 (10 percentile)
+## Accuracy: 0.967 (1 percentile)
 # end of accuracy
 
-print features_train.shape
 
+# number of rows is the number of data points
+# he number of columns is the number of features
+print len(features_train[0])
+## 3785 features with 10 percentile
+## 379 features with 1 percentile
 
 #########################################################
