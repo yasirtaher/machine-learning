@@ -15,14 +15,14 @@ grade_slow = [features_train[ii][0] for ii in range(0, len(features_train)) if l
 bumpy_slow = [features_train[ii][1] for ii in range(0, len(features_train)) if labels_train[ii] == 1]
 
 #### initial visualization
-plt.xlim(0.0, 1.0)
-plt.ylim(0.0, 1.0)
-plt.scatter(bumpy_fast, grade_fast, color="b", label="fast")
-plt.scatter(grade_slow, bumpy_slow, color="r", label="slow")
-plt.legend()
-plt.xlabel("bumpiness")
-plt.ylabel("grade")
-plt.show()
+# plt.xlim(0.0, 1.0)
+# plt.ylim(0.0, 1.0)
+# plt.scatter(bumpy_fast, grade_fast, color="b", label="fast")
+# plt.scatter(grade_slow, bumpy_slow, color="r", label="slow")
+# plt.legend()
+# plt.xlabel("bumpiness")
+# plt.ylabel("grade")
+# plt.show()
 ################################################################################
 
 
@@ -37,21 +37,18 @@ clf.fit(features_train, labels_train)
 
 print 'KNN Accuracy = {0}'.format(clf.score(features_test, labels_test))
 prettyPicture(clf, features_test, labels_test, "KNN")
-# Output
-# KNN Accuracy = 0.94
 
 ### AdaBoost
 from sklearn.ensemble import AdaBoostClassifier, RandomForestClassifier
 
-# from sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import DecisionTreeClassifier
 
-ada = AdaBoostClassifier()
+ada = AdaBoostClassifier(DecisionTreeClassifier(),n_estimators=100)
 ada.fit(features_train, labels_train)
 
 print 'AdaBoost Accuracy = {0}'.format(ada.score(features_test, labels_test))
 prettyPicture(ada, features_test, labels_test, "AdaBoost")
-# Output
-# AdaBoost Accuracy = 0.924
+
 ### Random Forest
 
 # try:
