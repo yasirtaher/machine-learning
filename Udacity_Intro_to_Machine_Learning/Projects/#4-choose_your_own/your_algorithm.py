@@ -35,16 +35,26 @@ from sklearn.neighbors import KNeighborsClassifier
 clf = KNeighborsClassifier(n_neighbors=1)
 clf.fit(features_train, labels_train)
 
-print 'Accuracy = {0}'.format(clf.score(features_test, labels_test))
-# Accuracy = 0.94
+print 'KNN Accuracy = {0}'.format(clf.score(features_test, labels_test))
+prettyPicture(clf, features_test, labels_test, "KNN")
+# Output
+# KNN Accuracy = 0.94
 
 ### AdaBoost
 from sklearn.ensemble import AdaBoostClassifier, RandomForestClassifier
-from sklearn.tree import DecisionTreeClassifier
 
+# from sklearn.tree import DecisionTreeClassifier
+
+ada = AdaBoostClassifier()
+ada.fit(features_train, labels_train)
+
+print 'AdaBoost Accuracy = {0}'.format(ada.score(features_test, labels_test))
+prettyPicture(ada, features_test, labels_test, "AdaBoost")
+# Output
+# AdaBoost Accuracy = 0.924
 ### Random Forest
 
-try:
-    prettyPicture(clf, features_test, labels_test)
-except NameError:
-    pass
+# try:
+#     prettyPicture(clf, features_test, labels_test)
+# except NameError:
+#     pass
