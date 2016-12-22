@@ -43,14 +43,14 @@ from sklearn.ensemble import AdaBoostClassifier, RandomForestClassifier
 
 from sklearn.tree import DecisionTreeClassifier
 
-ada = AdaBoostClassifier(DecisionTreeClassifier(), n_estimators=100)
+ada = AdaBoostClassifier(DecisionTreeClassifier(), n_estimators=10)
 ada.fit(features_train, labels_train)
 
 print 'AdaBoost Accuracy = {0}'.format(ada.score(features_test, labels_test))
 prettyPicture(ada, features_test, labels_test, "AdaBoost")
 
 ### Random Forest
-rand = RandomForestClassifier(n_estimators=100)
+rand = RandomForestClassifier(n_estimators=500)
 rand.fit(features_train, labels_train)
 
 print 'Random Forest Accuracy = {0}'.format(rand.score(features_test, labels_test))
