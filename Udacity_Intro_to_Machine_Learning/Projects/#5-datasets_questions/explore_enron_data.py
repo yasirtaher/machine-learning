@@ -25,3 +25,28 @@ print 'Number of Feature for each {0}'.format(len(enron_data.values()[0]))
 
 pois = [x for x, y in enron_data.items() if y['poi']]
 print 'Number of POI\'s {0}'.format(len(pois))
+
+poi_reader = open("../final_project/poi_names.txt","r")
+
+poi_reader.readline() # skip url
+poi_reader.readline() # skip blank line
+
+poi_count = 0
+for poi in poi_reader:
+	poi_count += 1
+
+print poi_count
+
+#1 What is the total value of the stock belonging to James Prentice?
+print enron_data["PRENTICE JAMES"]
+
+# How many email messages do we have from Wesley Colwell to persons of interest?
+print enron_data["COLWELL WESLEY"]
+
+# Whats the value of stock options exercised by Jeffrey K Skilling?
+print enron_data["SKILLING JEFFREY K"]["exercised_stock_options"]
+
+# Follow the Money
+names = ['SKILLING JEFFREY K', 'FASTOW ANDREW S', 'LAY KENNETH L']
+names_payments = {name:enron_data[name]['total_payments'] for name in names}
+print sorted(names_payments.items(), key=lambda x: x[1], reverse=True)
